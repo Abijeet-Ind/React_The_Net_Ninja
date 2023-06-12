@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home-page,
+.slide-container-for-image {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.navigation-top {
+    margin-top: 1rem;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-container{
+    width: 98vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-and-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-top .logo-display img {
+    height: 10vh;
+}
+
+.profile-and-menu .profile-image-here img {
+    height: 10vh;
+    background-clip: border-box;
+    border-radius: 5rem;
+    display: block;
+}
+
+.menu {
+    /* display: block; */
+    height: 10vh;
+    /* width: 10vw; */
+    background-color: white;
+    overflow: hidden;
+}
+
+.menu iframe{
+    color: white;
+    width: 6vw;
+    /* overflow: hidden; */
+}
+
+.slide-container-for-image {
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.home-page::before {
+    content: ' ';
+    background: url('./../images/home.jpg') no-repeat center center / cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: brightness(.5);
+    z-index: -1;
+}
+
+.owl-carousel {
+    width: 35%;
+    margin: 0 2rem 2rem 0;
+}
+
+.destination-slider {
+    height: 30vh;
+    /* width: 10vw; */
+}
+
+.destination-slider img {
+    border-radius: .5rem;
+    height: 100%;
+}
+

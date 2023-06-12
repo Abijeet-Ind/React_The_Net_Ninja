@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>billing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../css/billing.css">
+</head>
+
+<body>
+    <div class="tour-details-container">
+        <div class="tour-details-items">
+            <h1>Tour Details</h1>
+            <div class="booking-destination-name">
+                <div class="svg">
+                    <iframe src="./../svg_icons/map-pin.svg" frameborder="0"></iframe>
+                </div>
+                <p>Thailand</p>
+            </div>
+
+            <div class="destination-sub_location">
+                <div class="sub-location-title">
+                    <div class="svg">
+                        <iframe src="./../svg_icons/map.svg" frameborder="0"></iframe>
+                    </div>
+                    <p>Sub-Location</p>
+                </div>
+                <div class="other-sub_location">
+                    <div class="sub-location-destination-name booking-destination-name">
+                        <div class="svg">
+                            <iframe src="./../svg_icons/map-pin.svg" frameborder="0"></iframe>
+                        </div>
+                        <p>Bali</p>
+                    </div>
+
+                    <div class="sub-location-destination-name destination-name">
+                        <div class="svg">
+                            <iframe src="./../svg_icons/map-pin.svg" frameborder="0"></iframe>
+                        </div>
+                        <p>Ayutthaya</p>
+                    </div>
+
+                    <div class="sub-location-destination-name destination-name">
+                        <div class="svg">
+                            <iframe src="./../svg_icons/map-pin.svg" frameborder="0"></iframe>
+                        </div>
+                        <p>Kanchanburi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-cost">
+                <div class="svg">
+                    <iframe src="./../svg_icons/dollar-sign.svg" frameborder="0"></iframe>
+                </div>
+                <p>1230</p>
+            </div>
+
+            <div class="booking-destination-duration">
+                <div class="svg">
+                    <iframe src="./../svg_icons/clock.svg" frameborder="0"></iframe>
+                </div>
+                <p>7 Days</p>
+            </div>
+        </div>
+        <div class="booking-detail-fillup-container">
+            <h3 class="booking-user-name">Harish Khan</h3>
+            <div class="booking-information-fill-up">
+                <h1>Your Details</h1>
+
+                <div class="guide-profile-slider">
+                    <div class="guide-profile">
+                        <img src="./../images/auth/guides/laura.jpg" alt=""
+                            style="height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;">
+                    </div>
+
+                    <div class="guide-profile">
+                        <img src="./../images/auth/guides/mac.jpg" alt=""
+                            style="height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;">
+                    </div>
+
+                    <div class="guide-profile">
+                        <img src="./../images/auth/guides/max.jpg" alt=""
+                            style="height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;">
+                    </div>
+                </div>
+
+                <div class="date-selection">
+                    <h3 class="select-date-text">Select Date</h3>
+                    <div class="the-Dates">
+                        <div class="the-date"> JAN 15 </div>
+                        <div class="the-date"> MAR 25 </div>
+                        <div class="the-date"> OCT 15 </div>
+                        <div class="the-date"> OCT 15 </div>
+                    </div>
+                </div>
+
+                <div class="country-selection">
+                    <h3 class="country-text">Your Country</h3>
+                    <input type='country' id="input-country">
+                </div>
+
+                <div class="contact-selection">
+                    <h3 class="phone-number">Phone Number</h3>
+                    <input type='number' id="phone-number">
+                </div>
+
+                <div class="payment-selection">
+                    <h3 class="payment-text">Payment</h3>
+                    <div class="payment-fillup">
+                        <input type='number' id="input-payment-pin" placeholder="PIN">
+                        <input type='number' id="input-payment-cvv" placeholder="CVV">
+                    </div>
+                </div>
+
+
+
+                <div class="form-submit">
+                    <button type="submit" class="submit-detail-fillup">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="./../images/vietnam/footer-background.jpg" alt="" class="destination-background-image">
+    <script src="./../booking.js"></script>
+</body>
+
+</html>

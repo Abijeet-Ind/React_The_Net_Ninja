@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.destination-background-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(.2);
+}
+
+.tour-details-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+.tour-details-items h1 {
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.tour-details-items {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.other-sub_location {
+    /* margin: 0.5rem 0 0.5rem 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.destination-duration {
+    margin-top: .5rem;
+}
+
+.book-destination-name,
+.destination-duration,
+.sub-location-title,
+.destination-cost,
+.destination-registration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.destination-sub_location {
+    margin: 1rem 0 1rem 0;
+}
+
+.book-destination-name p,
+.destination-duration p,
+.sub-location-title p,
+.destination-cost p,
+.destination-registration p {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    margin-left: 25%;
+    font-weight: 300;
+}
+
+.svg iframe {
+    height: 30px;
+    width: 30px;
+}
+
+.sub-location-destination-name {
+    margin: .5rem 0 .5rem 4rem;
+}
+
+.sub-location-title {
+    display: flex;
+}
+
+/* fill up container */
+.detail-fillup-container {
+    position: absolute;
+    right: 0;
+    background-color: #D9D9D9;
+    width: 30%;
+    height: 100vh;
+    padding: 0 2rem 0 2rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    /* justify-content: space-around;
+}
+
+.user-name {
+    /* margin-top: 1rem; */
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+}
+
+.information-fill-up {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    /* text-align: center; */
+}
+
+/* guide image section */
+.guide-profile-slider {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.guide-profile {
+    width: 9vw;
+}
+
+.date-selection {
+    width: 100%;
+    /* background: green; */
+}
+
+.select-date-text,
+.country-text,
+.payment-text,
+.phone-number {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.the-Dates {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.the-date {
+    height: 5vh;
+    width: 6.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #12BD03;
+    cursor: pointer;
+}
+
+#input-country,
+#phone-number {
+    height: 5vh;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: 1px solid #12BD03;
+
+}
+
+.payment-fillup {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-payment-pin {
+    width: 75%;
+    height: 5vh;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: 1px solid #12BD03;
+}
+
+#input-payment-cvv {
+    width: 20%;
+    height: 5vh;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: 1px solid #12BD03;
+
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    padding: 0 1rem 0 1rem;
+    display: none;
+}
+
+.submit-detail-fillup {
+    width: 100%;
+    background-color: #12BD03;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    height: 5vh;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: .5rem;
+}
+
+.the-date,
+#input-payment-pin,
+#input-payment-cvv,
+#input-country,
+#phone-number {
+    background-color: #D9D9D9;
+    border-radius: .5rem;
+}
+
+.the-Dates .active {
+    background-color: #12BD03;
+    color: white;
+}

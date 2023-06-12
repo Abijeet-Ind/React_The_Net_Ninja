@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+
+    },
+
+    "emmet.includeLanguages": {
+        "javascript":"javascriptreact"
+    }
+}

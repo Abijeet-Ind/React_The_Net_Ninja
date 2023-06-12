@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"
+        integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        var mapOptions = {
+            center: [17.385044, 78.486671],
+            zoom: 20,
+            zoomControl: false
+        }
+
+        var map = L.map('map', mapOptions)
+        // .setView([51.505, -0.09], 13);
+        L.tileLayer('mapbox://styles/monjiro/cl2h5yohk005b14o6qc9p8o0l', {
+            zoom: false,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var zoomOptions = {
+            zoomInText: '1',
+            zoomOutText: '0',
+        };
+        var zoom = L.control.zoom(zoomOptions);   // Creating zoom control
+        zoom.addTo(map);
+        L.control.zoom(false)
+    </script>
+</body>
+
+</html>

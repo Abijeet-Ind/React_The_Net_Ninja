@@ -1,0 +1,8 @@
+extends base
+
+block content
+    .owl-carousel.owl-theme 
+        each destination in destinations
+            a(href=`${destination.slug}`) 
+                .item(alt='' src='./destination')
+                    img(src=`./images/${destination.destinationMainImage}.jpg` alt=`${destination.name}`)

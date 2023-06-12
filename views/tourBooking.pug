@@ -1,0 +1,77 @@
+doctype html 
+html 
+    head 
+        block head   
+            meta( charset='UTF-8' )
+            meta( name='viewport' content='width=device-width, initial-scale=1.0' )
+            title Booking
+            link(rel="shortcut icon" href="./../eye.png" type="image/x-icon")
+            link(rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css")
+            link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css' integrity='sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==' crossorigin='anonymous' referrerpolicy='no-referrer')
+            link(rel='stylesheet' href='./../css/billing.css')
+    body.padding
+        .tour-details-container
+            .tour-details-items
+                h1 Tour Details
+                .book-destination-name
+                    .svg
+                        iframe(src='./../svg_icons/map-pin.svg' frameborder='0')
+                    - let name = destination.destinationName.toLocaleUpperCase();
+                    p= name 
+                .destination-sub_location
+                    .sub-location-title
+                        .svg
+                            iframe(src='./../svg_icons/map.svg' frameborder='0')
+                        p Sub-Location
+                    .other-sub_location
+                        each places in destination.sub_destinations
+                            .sub-location-destination-name.book-destination-name
+                                .svg
+                                    iframe(src='./../svg_icons/map-pin.svg' frameborder='0')
+                                p= places
+                .destination-cost
+                    .svg
+                        iframe(src='./../svg_icons/dollar-sign.svg' frameborder='0')
+                    p= destination.price
+                .destination-duration
+                    .svg
+                        iframe(src='./../svg_icons/clock.svg' frameborder='0')
+                    p= `${destination.duration} Days`
+                .destination-registration
+                    .svg
+                        iframe(src='./../svg_icons/clock.svg' frameborder='0')
+                    p= `${destination.maxIndividuals} / ${destination.registeredIndividuals}`
+            .detail-fillup-container
+                h3.user-name= user.name
+                .information-fill-up
+                    h1 Your Details
+                    .guide-profile-slider
+                        .guide-profile
+                            img(src='./../images/auth/guides/laura.jpg' alt='' style='height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;')
+                        .guide-profile
+                            img(src='./../images/auth/guides/mac.jpg' alt='' style='height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;')
+                        .guide-profile
+                            img(src='./../images/auth/guides/max.jpg' alt='' style='height: 25vh; width: 10vw; object-fit: cover; border-radius: .5rem;')
+                    .date-selection
+                        h3.select-date-text Select Date
+                        .the-Dates
+                            each dates in destination.goingDate
+                                - date = dates.toLocaleUpperCase()
+                                .the-date= date
+                    .country-selection
+                        h3.country-text Your Country
+                        input#input-country(type='country')
+                    .contact-selection
+                        h3.phone-number Phone Number
+                        input#phone-number(type='number')
+                    .payment-selection
+                        h3.payment-text Payment
+                        .payment-fillup
+                            input#input-payment-pin(type='number' placeholder='PIN')
+                            input#input-payment-cvv(type='number' placeholder='CVV')
+                    .form-submit
+                        button.submit-detail-fillup(type='submit') Submit
+        img.destination-background-image(src=`./../images/${destination.destinationMainImage}.jpg` alt='')
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.6/axios.js" integrity="sha512-SjwdpP6ljFy32hbO7xH/8Yx7JtKvh/tu+NtYGmMAGKe8hjYU548NH5mle1ObS3r/97PE6jy9sD+fSXPpnmeWAw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="./../booking.js") 

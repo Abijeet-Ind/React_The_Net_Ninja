@@ -1,0 +1,19 @@
+extends base
+
+block content
+    section.main-image-container
+        .text-background-clip
+            - let name = destination.destinationName.toUpperCase();
+            p.destination-name= name
+            //- <img src="./images/vietnam/boat.jpg" alt="" class="text-image">
+        img.top-image-display(src=`./images/${destination.destinationMainImage}.jpg` alt=`FAILED TO LOAD ${destination.destinationName} MAIN IMAGE`)
+    section.tour-map-container
+        #map
+    section.sloppy-images
+        each destinationS in destination.destinationImages
+            img#img(src=`./images/${destinationS}.jpg` alt=`FAILED TO LOAD ${destinationS.destinationName} MAIN IMAGE`)
+        //- img#img(src='./images/vietnam/mountain_loop_hole.jpg' alt='')
+        //- img#img(src='./images/vietnam/mountains_and_house.jpg' alt='')
+    section.footer-image-container
+        img.footer-image-display(src=`./images/${destination.destinationFooterImage}.jpg` alt=`FAILED TO LOAD ${destination.destinationName} MAIN IMAGE`)
+    

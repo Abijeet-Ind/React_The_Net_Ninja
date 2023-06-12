@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour display page</title>
+
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="padding">
+    <section class="main-image-vietman">
+        <p class="destination-name" style="
+            font-size: 18rem;
+            font-weight: 900;
+            background: url('./images/vietnam/slopes.jpg') no-repeat center center / cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: .001px;
+            font-family: 'Lato', sans-serif;
+            -webkit-user-select: none;
+        ">
+            VIETNAM
+        </p>
+    </section>
+
+    <section class="tour-information" id="map"></section>
+
+    <section class="sloppy-images">
+        <img src="./images/vietnam/text-background.jpg" alt="" id="img">
+        <img src="./images/vietnam/mountain_loop_hole.jpg" alt="" id="img">
+        <img src="./images/vietnam/mountains_and_house.jpg" alt="" id="img">
+    </section>
+
+    <section class="join-us">
+        <div class="journey-begin-container" style="display: none;">
+            <div class="logo-container"></div>
+            <div class="information-container">
+                <p>Pack Your Bag And Leave The Rest To Us</p>
+                <a href="#">
+                    <button class="form-fillup"> Allow Us To Take Care Of Your Journey </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+
+    <script>
+        if (window.location.pathname('/destination')) {
+
+
+            mapboxgl.accessToken = 'pk.eyJ1IjoibW9uamlybyIsImEiOiJjbDF3b2FidncxczFiM2RvZmhiaDMyc3FvIn0.1xj07WwNRMHd6FHTSK534A';
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/monjiro/cl2h5yohk005b14o6qc9p8o0l', // style URL
+                center: [-74.5, 40], // starting position [lng, lat]
+                zoom: 15,
+            });
+            map.scrollZoom.disable();
+        }
+
+    </script>
+
+</body>
+
+</html>

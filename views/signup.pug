@@ -1,0 +1,30 @@
+extends base
+
+block content
+    section.register-section
+        .register-form-container
+            .information-fillup-container
+                h1.login-text(style='text-align: center;') Register
+                .div.name
+                    p.input-indication-text Name
+                    input(type='text' name='' id='name')
+                .div.email
+                    p.input-indication-text E-Mail
+                    input(type='email' name='' id='email')
+                .div.login-password
+                    p.input-indication-text Password
+                    input(type='password' name='' id='password')
+                .div.login-password
+                    p.input-indication-text Password Confirm
+                    input(type='password' name='' id='passwordConfirm')
+                .div.submit-button(style='cursor: pointer; height: 10%;')
+                    button(type='submit' id="submit-button" style='cursor: pointer;') submit
+                .register-medias.other-medias
+                    hr(style='background: #12bd03; height: 2px; width: 35%;')
+                    .social-medias-icons(style='transform: translateY(2rem);')
+                        div
+                            iframe(class="iframe" src='./svg_icons/twitter.svg' frameborder='0')
+                        div
+                            iframe(class="iframe" src='./svg_icons/facebook.svg' frameborder='0')
+                        div
+                            iframe(class="iframe" src='./svg_icons/instagram.svg' frameborder='0')
